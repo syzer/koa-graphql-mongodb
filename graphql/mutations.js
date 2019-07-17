@@ -1,8 +1,8 @@
-const { GraphQLObjectType, GraphQLString } = require('graphql');
+const { GraphQLObjectType, GraphQLString } = require('graphql')
 
-const addGadget = require('./mutations/addGadget');
-const updateGadget = require('./mutations/updateGadget');
-const removeGadget = require('./mutations/removeGadget');
+const addGadget = require('./mutations/addGadget')
+const updateGadget = require('./mutations/updateGadget')
+const removeGadget = require('./mutations/removeGadget')
 
 const Mutation = new GraphQLObjectType({
   name: 'Mutation',
@@ -13,4 +13,4 @@ const Mutation = new GraphQLObjectType({
   }
 })
 
-module.exports = Mutation;
+module.exports = Mutation

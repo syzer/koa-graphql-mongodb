@@ -1,11 +1,11 @@
-const { GraphQLObjectType, GraphQLString } = require('graphql');
-const gadgetGraphQLType = require('./../types/gadgetType');
-const Gadget = require('./../../models/gadget');
+const { GraphQLObjectType, GraphQLString } = require('graphql')
+const gadgetGraphQLType = require('./../types/gadgetType')
+const Gadget = require('./../../models/gadget')
 
 module.exports = {
   type: gadgetGraphQLType,
   args: {
-    name: { type: GraphQLString }, 
+    name: { type: GraphQLString },
     release_date: { type: GraphQLString },
     by_company: { type: GraphQLString },
     price: { type: GraphQLString }
@@ -18,7 +18,9 @@ module.exports = {
       price: args.price,
     })
 
-    return newGadget.save();
+    const gadget =  newGadget.save()
+    console.warn(gadget)
+    return gadget
   }
-};
+}
 

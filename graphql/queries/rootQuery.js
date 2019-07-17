@@ -1,16 +1,17 @@
-const { GraphQLObjectType } =  require('graphql');
+const { GraphQLObjectType } =  require('graphql')
 
-const Gadget = require('../../models/gadget');
 const queryAllGadgets = require('./queryAllGadgets')
-const queryGadgetById = require('./queryGadgetById');
+const queryGadgetById = require('./queryGadgetById')
+const queryByPriceRange = require('./queryGadgetByPriceRange')
 
 const RootQuery = new GraphQLObjectType({
   name: 'RootQueryType',
   fields: {
     queryGadgetById,
     queryAllGadgets,
+    queryByPriceRange,
   }
 })
 
-module.exports = RootQuery;
+module.exports = RootQuery
 

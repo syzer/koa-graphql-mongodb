@@ -1,5 +1,5 @@
-const mongoose = require('mongoose');
-const Schema = mongoose.Schema;
+const mongoose = require('mongoose')
+const Schema = mongoose.Schema
 
 /*
   notice there is no ID. That's because Mongoose will assign
@@ -11,6 +11,6 @@ const GadgetSchema = new Schema({
   release_date: Date,
   by_company: String,
   price: Number,
-});
+})
 
-module.exports = mongoose.model('Gadget', GadgetSchema);
+module.exports = mongoose.model('Gadget', GadgetSchema)
