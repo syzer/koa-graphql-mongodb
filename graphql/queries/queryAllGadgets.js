@@ -4,8 +4,8 @@ const Gadget = require('../../models/gadget')
 
 module.exports = {
   type: new GraphQLList(gadgetGraphQLType),
-  args: {},
-  resolve() {
-    return Gadget.find({})
+  args: gadgetGraphQLType.getFields(),
+  resolve(parent, args = {}) {
+    return Gadget.find(args)
   }
 }
